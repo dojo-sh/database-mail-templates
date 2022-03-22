@@ -1,0 +1,16 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use DojoSh\DatabaseMailTemplates\TemplateMailable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
+class $CLASS_NAME$ extends TemplateMailable
+{
+    //public $templateVariable;
+    //
+    //public function __construct($templateVariable)
+    //{
+    //    $this->templateVariable = $templateVariable;
+    //}
+}

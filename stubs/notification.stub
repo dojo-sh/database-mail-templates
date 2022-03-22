@@ -1,0 +1,37 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
+use $MAILABLE_NAMESPACE$;
+
+class $CLASS_NAME$ extends Notification
+{
+    use Queueable;
+
+    public function __construct()
+    {
+    }
+
+    public function via($notifiable)
+    {
+        return ['mail'];
+    }
+
+    public function toMail($notifiable)
+    {
+        return (new $MAILABLE_CLASS_NAME$)->to($notifiable->routeNotificationFor('mail'));
+    }
+
+
+    public function toArray($notifiable)
+    {
+        return [
+            //
+        ];
+    }
+
+}
